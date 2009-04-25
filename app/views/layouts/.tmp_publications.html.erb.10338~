@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Publications: <%= controller.action_name %></title>
+  <%= stylesheet_link_tag 'publications' %>
+</head>
+<body id="container">
+	<p style="color: green"><%= flash[:notice] %></p>
+<div id="top"><center>
+<img src="/images/logoesctaic.jpg" alt="images/logoesctaic.jpg"/>
+ <img src="/images/imgstripeblu782x36_3.jpg"/></center>
+</div>
+<div id="leftnav">
+<p>	<table>     <tr>
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td align=left colspan=2><span class=MenuPadreLink><a href=index.html>Home</a></span></td>
+					        </tr>
+					         <tr>
+					            <td colspan=3 background="./images/ImgFiloBlu.jpg" />
+					        </tr>
+					         <tr>
+
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td colspan=2><span class=MenuPadreLink><a href=information.html>General Information</a></span></td>
+					        </tr>
+					         <tr>
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td colspan=2><span class=MenuPadreLink><a href=keyareas.html>ESCTAICs key areas</a></span></td>
+					        </tr>
+					         <tr>
+
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td colspan=2><a href=meetings.html><span class=MenuPadreLink>Meetings</span></a></td>
+					        </tr>
+					         <tr>
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td colspan=2><a href=publications.html><span class=MenuPadreLink>Publications</span></a></td>
+					        </tr>
+					         <tr>
+
+					            <td colspan=3 background="./images/ImgFiloBlu.jpg" />
+					        </tr>
+					         <tr>
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td colspan=2><a href=executive.html><span class=MenuPadreLink>Executive Committee</span></a></td>
+					        </tr>
+					         <tr>
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+
+					            <td colspan=2><a href=membership.html><span class=MenuPadreLink>Membership</span></a></td>
+					        </tr>
+					         <tr>
+					            <td><img src="./images/ImgMenuTriangolo.jpg" /></td>
+					            <td colspan=2><a href=impressum.html><span class=MenuPadreLink>Impressum</span></a></td>
+					        </tr>
+					        </table>
+
+</p>
+</div>
+
+
+<div id="content">
+
+<p>
+<%= yield %>
+</p>
+
+</div>
+
+<div id="rightnav">
+	
+<img src="/images/example.jpg" alt="images/example.jpg"/>
+ <img src="/images/image.jpg"/>
+
+</div>
+<div id="footer">
+Footer
+</div>
+
+
+
+
+
+</body>
+</html>

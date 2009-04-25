@@ -1,0 +1,141 @@
+/* Global styles */
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0 ;
+  font: bold smaller sans-serif;
+}
+#container
+{
+font-size: 14px;
+width: 99%;
+margin: 10px auto;
+background-color: #fff;
+color: #333;
+border: 1px solid gray;
+line-height: 130%;
+}
+
+
+
+#top
+{
+padding: .5em;
+/*background-color: #ddd;*/
+border-bottom: 1px solid gray;
+}
+
+#top h1
+{
+padding: 0;
+margin: 0;
+}
+
+#leftnav
+{
+font-size: 12px;	
+float: left;
+width: 140px;
+margin: 0;
+padding: 1em;
+}
+
+#rightnav
+{
+font-size: 12px;	
+float: right;
+width: 140px;
+margin: 0;
+padding: 1em;
+}
+
+#content
+{
+margin-left: 180px;
+border-left: 1px solid gray;
+margin-right: 20px;
+border-right: 1px solid gray;
+padding: 1em;
+max-width: 60em;
+}
+#content table.sample {
+    border-width: 1px 1px 1px 1px;
+    border-spacing: 2px;
+    border-style: outset outset outset outset;
+    border-color: gray gray gray gray;
+    border-collapse: separate;
+    background-color: white;
+}
+table.sample th {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: gray gray gray gray;
+    background-color: white;
+    -moz-border-radius: 0px 0px 0px 0px;
+}
+table.sample td {
+    border-width: 1px 1px 1px 1px;
+    padding: 1px 1px 1px 1px;
+    border-style: inset inset inset inset;
+    border-color: gray gray gray gray;
+    background-color: white;
+    -moz-border-radius: 0px 0px 0px 0px;
+}
+
+#footer
+{
+clear: both;
+margin: 0;
+padding: .5em;
+color: #333;
+background-color: #ddd;
+border-top: 1px solid gray;
+}
+
+#leftnav p, #rightnav p { margin: 0 0 1em 0; }
+#content h2 { margin: 0 0 .5em 0; }
+
+
+/* The error box */
+.fieldWithErrors {
+  padding: 2px;
+  background-color: #EEFFEE;
+  display: inline;
+}
+.fieldWithErrors * {
+  background-color: red;
+}
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0 ;
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00 ;
+  color: #fff ;
+}
+#errorExplanation p {
+  color: #333 ;
+  margin-bottom: 0;
+  padding: 5px;
+}
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+.locale {
+         float:right;
+         padding-top: 0.2em
+}
+
+

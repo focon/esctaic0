@@ -1,0 +1,23 @@
+<p>
+  <b>Tutorial:</b>
+  <%=h @registration.tutorial %>
+</p>
+
+<p>
+  <b>Workshop:</b>
+  <%=h @registration.workshop %>
+</p>
+
+<p>
+  <b>Accomadation:</b>
+  <%=h @registration.accomadation %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%=h @registration.location %>
+</p>
+
+
+<%= link_to 'Edit', edit_registration_path(@registration) %> |
+<%= link_to 'Back', registrations_path %>

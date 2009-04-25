@@ -1,0 +1,29 @@
+<center><h1>Esctaic publications list</h1></center>
+
+<table class="sample">
+  <tr>
+ 
+    <th>Title</th>
+	<th>Author</th>
+	    <th>Venue/Year</th>
+		<th>Category</th>
+	<th>Admin</th>
+  </tr>
+
+<% for publication in @publications %>
+  <tr>
+    
+    <td><a href="http://<%=h publication.url %>"><%=h publication.title %></a></td>
+    <td><%=h publication.author %></td>
+	<td><%=h publication.year %><br/><%=h publication.venue %></td>
+	<td><%=h publication.category %></td>
+       <td><%=link_to 'Edit', edit_admin_publication_path(publication) %><br/><%=link_to 'Destroy',  confirm_destroy_admin_publication_path(publication) %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<br />
+<%= will_paginate @publications %>
+
+<%= link_to 'New publication', new_admin_publication_path %>

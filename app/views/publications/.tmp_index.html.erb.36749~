@@ -1,0 +1,24 @@
+<h1>Listing publications</h1>
+
+<table>
+  <tr>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Category</th>
+  </tr>
+
+<% for publication in @publications %>
+  <tr>
+    <td><%=h publication.author %></td>
+    <td><%=h publication.title %></td>
+    <td><%=h publication.category %></td>
+    <td><%= link_to 'Show', publication %></td>
+    <td><%= link_to 'Edit', edit_publication_path(publication) %></td>
+    <td><%= link_to 'Destroy', publication, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New publication', new_publication_path %>

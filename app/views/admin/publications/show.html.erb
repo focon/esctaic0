@@ -1,0 +1,28 @@
+<p>
+  <b>url:</b>
+  <%=h @publication.url %>
+</p>
+<p>
+  <b>Author:</b>
+  <%=h @publication.author %>
+</p>
+<p>
+  <b>Title:</b>
+  <%=h @publication.title %>
+</p>
+<p>
+  <b>Venue:</b>
+  <%=h @publication.venue %>
+</p>
+<p>
+  <b>Year:</b>
+  <%=h @publication.year %>
+</p>
+<p>
+  <b>Category:</b>
+  <%=h @publication.category %>
+</p>
+
+
+<%= link_to 'Edit', edit_admin_publication_path(@publication) %> |
+<%= link_to 'Back', admin_publications_path %>

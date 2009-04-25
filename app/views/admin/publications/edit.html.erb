@@ -1,0 +1,40 @@
+
+<h3>Editing publication</h3>
+
+
+
+
+<% form_for([:admin, @publication]) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :author %><br />
+    <%= f.text_field :author %>
+  </p>
+  <p>
+  	    <%= f.label :url %><br />
+<%= f.text_field :url %>
+  </p>
+    <%= f.label :title %><br />
+<%= f.text_field :title %>
+  </p>
+      <p>
+<%= f.label :venue %><br />
+<%= f.text_field :venue %>
+  </p>
+    <p>
+<%= f.label :year %><br />
+<%= f.text_field :year %>
+  </p>
+
+  <p>
+    <%= f.label :category %><br />
+    <%= f.text_field :category %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', [:admin, @publication] %> |
+<%= link_to 'Back', admin_publications_path %>

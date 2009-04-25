@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tutorial: MyString
+  workshop: MyString
+  accomadation: MyString
+  location: MyString
+
+two:
+  tutorial: MyString
+  workshop: MyString
+  accomadation: MyString
+  location: MyString

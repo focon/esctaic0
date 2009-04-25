@@ -1,0 +1,27 @@
+<h1>New registration</h1>
+
+<% form_for(@registration) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tutorial %><br />
+    <%= f.text_field :tutorial %>
+  </p>
+  <p>
+    <%= f.label :workshop %><br />
+    <%= f.text_field :workshop %>
+  </p>
+  <p>
+    <%= f.label :accomadation %><br />
+    <%= f.text_field :accomadation %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', registrations_path %>
