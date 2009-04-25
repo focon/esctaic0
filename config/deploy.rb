@@ -3,8 +3,8 @@
 
 set :application, "ectaic"
 
-set :repository, "http://svn.foo.com/svn/#{application}/trunk"
-# set :repository, "file:///Users/[path to project]/.git
+# set :repository, "http://svn.foo.com/svn/#{application}/trunk"
+set :repository, "file:///~/workspace/esctaic/.git
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
 # extension ".pub".
@@ -27,15 +27,15 @@ set :rails_env, "production"
 # NOTE: Some of these should be omitted if not needed.
 set :ec2onrails_config, {
   # S3 bucket and "subdir" used by the ec2onrails:db:restore task
-  :restore_from_bucket => "your-bucket",
-  :restore_from_bucket_subdir => "database",
+  :restore_from_bucket => "focon",
+  #:restore_from_bucket_subdir => "database",
   
   # S3 bucket and "subdir" used by the ec2onrails:db:archive task
   # This does not affect the automatic backup of your MySQL db to S3, it's
   # just for manually archiving a db snapshot to a different bucket if 
   # desired.
-  :archive_to_bucket => "your-other-bucket",
-  :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
+  :archive_to_bucket => "focon",
+  #:archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
   
   # Set a root password for MySQL. Run "cap ec2onrails:db:set_root_password"
   # to enable this. This is optional, and after doing this the
