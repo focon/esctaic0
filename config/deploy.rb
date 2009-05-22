@@ -1,22 +1,24 @@
 # This is a sample Capistrano config file for EC2 on Rails.
 # It should be edited and customized.
 
-set :application, "ectaic"
-
+set :application, "esctaic"
+set :scm, :git 
+set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
-set :repository, "file:///~/workspace/esctaic/.git
+ #set :repository, "file:///home/focon/workspace/esctaic/.git"
+#file:///Users/[path to project]/.git""
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
-# extension ".pub".
-ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id_rsa-gtg-keypair"]
-
+# extension .pub".
+ ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/gsg-keypair"]
+# ssh_options[:keys] = ["/home/focon/.ssh/gsg-keypair"]
 # Your EC2 instances. Use the ec2-xxx....amazonaws.com hostname, not
 # any other name (in case you have your own DNS alias) or it won't
 # be able to resolve to the internal IP address.
-role :web,      "ec2-79-125-50-41.eu-west-1.compute.amazonaws.com"
-role :app,      "ec2-79-125-50-41.eu-west-1.compute.amazonaws.com"
-role :db,       "ec2-79-125-50-41.eu-west-1.compute.amazonaws.com", :primary => true
-role :memcache, "ec2-79-125-50-41.eu-west-1.compute.amazonaws.com"
+role :web,      "ec2-79-125-61-165.eu-west-1.compute.amazonaws.com"
+role :app,      "ec2-79-125-61-165.eu-west-1.compute.amazonaws.com"
+role :db,       "ec2-79-125-61-165.eu-west-1.compute.amazonaws.com", :primary => true
+role :memcache, "ec2-79-125-61-165.eu-west-1.compute.amazonaws.com"
 
 # Whatever you set here will be taken set as the default RAILS_ENV value
 # on the server. Your app and your hourly/daily/weekly/monthly scripts
@@ -24,7 +26,7 @@ role :memcache, "ec2-79-125-50-41.eu-west-1.compute.amazonaws.com"
 set :rails_env, "production"
 
 # EC2 on Rails config. 
-# NOTE: Some of these should be omitted if not needed.
+# NOTE: Some of these should be omitted if not needed.    
 set :ec2onrails_config, {
   # S3 bucket and "subdir" used by the ec2onrails:db:restore task
   :restore_from_bucket => "focon",
@@ -65,7 +67,7 @@ set :ec2onrails_config, {
   # server's filesystem. 
   # If you don't need to deploy customized config files to the server then
   # remove this.
-  :server_config_files_root => "../server_config",
+  # :server_config_files_root => "../server_config",
   
   # If config files are deployed, some services might need to be restarted.
   # If you don't need to deploy customized config files to the server then
