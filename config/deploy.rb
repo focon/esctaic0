@@ -3,9 +3,9 @@
 
 set :application, "esctaic"
 set :scm, :git 
-#set :repository,"."
+# set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
-set :repository, "file:///home/focon/workspace/esctaic/.git/estaic"
+set :repository, "file:///home/focon/workspace/esctaic/"
 #file:///focon/[path to project]/.git""
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
