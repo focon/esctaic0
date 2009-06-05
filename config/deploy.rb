@@ -3,9 +3,15 @@
 
 set :application, "esctaic"
 set :scm, :git 
+#set :scm_username, focon
+#set :runner, focon
+#set :use_sudo, false
+#set :branch, "master"
+#set :deploy_via, :checkout
+#set :git_shallow_clone, 1
 # set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
- set :repository, "file:///home/focon/git/workspace/esctaic"
+ set :repository, "git@github.com:focon/esctaic.git"
 #file:///focon/[path to project]/.git""
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
@@ -15,10 +21,10 @@ set :scm, :git
 # Your EC2 instances. Use the ec2-xxx....amazonaws.com hostname, not
 # any other name (in case you have your own DNS alias) or it won't
 # be able to resolve to the internal IP address.
-role :web,      "ec2-79-125-58-121.eu-west-1.compute.amazonaws.com"
-role :app,      "ec2-79-125-58-121.eu-west-1.compute.amazonaws.com"
-role :db,       "ec2-79-125-58-121.eu-west-1.compute.amazonaws.com", :primary => true
-role :memcache, "ec2-79-125-58-121.eu-west-1.compute.amazonaws.com"
+role :web,      "ec2-79-125-40-58.eu-west-1.compute.amazonaws.com"
+role :app,      "ec2-79-125-40-58.eu-west-1.compute.amazonaws.com"
+role :db,       "ec2-79-125-40-58.eu-west-1.compute.amazonaws.com", :primary => true
+role :memcache, "ec2-79-125-40-58.eu-west-1.compute.amazonaws.com"
 
 # Whatever you set here will be taken set as the default RAILS_ENV value
 # on the server. Your app and your hourly/daily/weekly/monthly scripts
