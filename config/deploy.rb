@@ -3,7 +3,7 @@
 
 set :application, "esctaic"
 set :scm, :git 
-set :scm_username, focon
+#set :scm_username, focon
 #set :runner, focon
 set :use_sudo, false
 set :branch, "master"
