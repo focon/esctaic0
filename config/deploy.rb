@@ -11,7 +11,7 @@ set :deploy_via, :checkout
 set :git_shallow_clone, 1
 # set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
- set :repository, "git@github.com:focon/esctaic.git"
+ set :repository, "remote add orign git@github.com:focon/esctaic.git"
 #file:///focon/[path to project]/.git""
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
