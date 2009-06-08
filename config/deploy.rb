@@ -4,11 +4,14 @@
 set :application, "esctaic"
 set :scm, :git 
 #set :scm_username, focon
+#set :user, focon
 #set :runner, focon
-# set :use_sudo, false
-# set :branch, "master"
-# set :deploy_via, :checkout
-# set :git_shallow_clone, 1
+ssh_options[:forward_agent] = true
+set :branch, "master"
+set :deploy_via, :remote_cache
+set :git_shallow_clone, 1
+set :git_enable_submodules, 1
+set :use_sudo, false
 # set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
  set :repository, "git@github.com:focon/esctaic.git"
