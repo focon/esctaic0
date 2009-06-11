@@ -3,14 +3,17 @@
 
 set :application, "esctaic"
 set :scm, :git 
-#set :scm_username, focon
+set :scm_passphrase, "" 
+set :deploy_via, :copy
+ set :user, :root
+#set :repository_cache, "git_cache"
+# set :scm_username, focon
 #set :user, focon
 #set :runner, focon
 ssh_options[:forward_agent] = true
-set :branch, "master"
-set :deploy_via, :remote_cache
+#set :branch, "master"
 set :git_shallow_clone, 1
-set :git_enable_submodules, 1
+#set :git_enable_submodules, 1
 set :use_sudo, false
 # set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
@@ -19,7 +22,8 @@ set :use_sudo, false
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
 # extension .pub".
- ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/gsg-keypair"]
+ # ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/gsg-keypair"]
+ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/gsg-keypair"]
 # ssh_options[:keys] = ["/home/focon/.ssh/gsg-keypair"]
 # Your EC2 instances. Use the ec2-xxx....amazonaws.com hostname, not
 # any other name (in case you have your own DNS alias) or it won't
@@ -95,5 +99,5 @@ set :ec2onrails_config, {
   # and key files need to exist on the server, The cert file should be in
   # /etc/ssl/certs/default.pem and the key file should be in
   # /etc/ssl/private/default.key (see :server_config_files_root).
-  :enable_ssl => true
+ # :enable_ssl => true
 }
