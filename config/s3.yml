@@ -1,9 +1,9 @@
 staging:
   aws_access_key: 1HNRH1HNMENG1BTNVTG2
-  aws_secret_access_key: ryKEDjZK25xEnqOdumpYp7AQN2l8OuOYXfrULlvu
+  aws_secret_access_key: 7DW5MHUUPUIBgfqGIcaEyrXC6RcNJt9E4H7/M7Bj
   bucket_base_name: focon
 
 production:
   aws_access_key: 1HNRH1HNMENG1BTNVTG2
-  aws_secret_access_key: ryKEDjZK25xEnqOdumpYp7AQN2l8OuOYXfrULlvu
+  aws_secret_access_key: 7DW5MHUUPUIBgfqGIcaEyrXC6RcNJt9E4H7/M7Bj
   bucket_base_name: focon

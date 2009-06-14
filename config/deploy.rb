@@ -8,7 +8,7 @@ set :deploy_via, :copy
  set :user, :root
 #set :repository_cache, "git_cache"
 # set :scm_username, focon
-#set :user, focon
+# set :user, focon
 #set :runner, focon
 ssh_options[:forward_agent] = true
 #set :branch, "master"
@@ -23,7 +23,7 @@ set :use_sudo, false
 # the private key in the same folder, the public key should have the 
 # extension .pub".
  # ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/gsg-keypair"]
-ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/gsg-keypair"]
+ssh_options[:keys] = ["#{ENV['HOME']}/.ssh/id-dsa"]
 # ssh_options[:keys] = ["/home/focon/.ssh/gsg-keypair"]
 # Your EC2 instances. Use the ec2-xxx....amazonaws.com hostname, not
 # any other name (in case you have your own DNS alias) or it won't
