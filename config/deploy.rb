@@ -4,14 +4,14 @@
 set :application, "esctaic"
 set :scm, :git 
 set :scm_passphrase, "" 
-set :deploy_via, :copy
+set :deploy_via,  :checkout
  set :user, :root
-#set :repository_cache, "git_cache"
+set :repository_cache, "git_cache"
 # set :scm_username, focon
 # set :user, focon
 #set :runner, focon
 ssh_options[:forward_agent] = true
-#set :branch, "master"
+set :branch, "master"
 set :git_shallow_clone, 1
 #set :git_enable_submodules, 1
 set :use_sudo, false
@@ -43,14 +43,14 @@ set :rails_env, "production"
 set :ec2onrails_config, {
   # S3 bucket and "subdir" used by the ec2onrails:db:restore task
   :restore_from_bucket => "focon",
-  #:restore_from_bucket_subdir => "database",
+  :restore_from_bucket_subdir => "database",
   
   # S3 bucket and "subdir" used by the ec2onrails:db:archive task
   # This does not affect the automatic backup of your MySQL db to S3, it's
   # just for manually archiving a db snapshot to a different bucket if 
   # desired.
   :archive_to_bucket => "focon",
-  #:archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
+  :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
   
   # Set a root password for MySQL. Run "cap ec2onrails:db:set_root_password"
   # to enable this. This is optional, and after doing this the
@@ -80,7 +80,7 @@ set :ec2onrails_config, {
   # server's filesystem. 
   # If you don't need to deploy customized config files to the server then
   # remove this.
-  # :server_config_files_root => "../server_config",
+   :server_config_files_root => "../server_config",
   
   # If config files are deployed, some services might need to be restarted.
   # If you don't need to deploy customized config files to the server then
@@ -92,9 +92,9 @@ set :ec2onrails_config, {
   # remove this.
   #:admin_mail_forward_address => "you@yourdomain.com",
   #
-  #task :after_update_code, :roles => [:web, :db, :app] do
-  # run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
-  #end
+  task :after_update_code, :roles => [:web, :db, :app] do
+   run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
+  end
   # Set this if you want SSL to be enabled on the web server. The SSL cert 
   # and key files need to exist on the server, The cert file should be in
   # /etc/ssl/certs/default.pem and the key file should be in
