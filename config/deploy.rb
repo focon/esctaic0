@@ -43,14 +43,14 @@ set :rails_env, "production"
 set :ec2onrails_config, {
   # S3 bucket and "subdir" used by the ec2onrails:db:restore task
   :restore_from_bucket => "focon",
-  :restore_from_bucket_subdir => "database",
+  # :restore_from_bucket_subdir => "database",
   
   # S3 bucket and "subdir" used by the ec2onrails:db:archive task
   # This does not affect the automatic backup of your MySQL db to S3, it's
   # just for manually archiving a db snapshot to a different bucket if 
   # desired.
   :archive_to_bucket => "focon",
-  :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
+  # :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
   
   # Set a root password for MySQL. Run "cap ec2onrails:db:set_root_password"
   # to enable this. This is optional, and after doing this the
@@ -80,7 +80,7 @@ set :ec2onrails_config, {
   # server's filesystem. 
   # If you don't need to deploy customized config files to the server then
   # remove this.
-   :server_config_files_root => "../server_config",
+  # :server_config_files_root => "../server_config",
   
   # If config files are deployed, some services might need to be restarted.
   # If you don't need to deploy customized config files to the server then
