@@ -92,9 +92,9 @@ set :ec2onrails_config, {
   # remove this.
   #:admin_mail_forward_address => "you@yourdomain.com",
   #
-  task :after_update_code, :roles => [:web, :db, :app] do
-   run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
-  end
+  # task :after_update_code, :roles => [:web, :db, :app]do
+  #  run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
+  # end 
   # Set this if you want SSL to be enabled on the web server. The SSL cert 
   # and key files need to exist on the server, The cert file should be in
   # /etc/ssl/certs/default.pem and the key file should be in
