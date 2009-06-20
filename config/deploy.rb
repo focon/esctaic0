@@ -4,7 +4,7 @@
 set :application, "esctaic"
 set :scm, :git 
 set :scm_passphrase, "" 
-set :deploy_via,  :checkout
+set :deploy_via,  :copy
  set :user, :root
 set :repository_cache, "git_cache"
 # set :scm_username, focon
@@ -92,7 +92,7 @@ set :ec2onrails_config, {
   # remove this.
   #:admin_mail_forward_address => "you@yourdomain.com",
   #
-  # task :after_update_code, :roles => [:web, :db, :app]do
+  # task :after_update_code, :roles => [:web, :db, :app] do
   #  run "ln -nfs #{deploy_to}/#{shared_dir}/config/database.yml #{release_path}/config/database.yml"
   # end 
   # Set this if you want SSL to be enabled on the web server. The SSL cert 
