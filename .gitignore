@@ -2,5 +2,5 @@
 log/*.log
 tmp/**/*
 config/s3.yml
-# config/database.yml
+config/database.yml
 config/*.yml
