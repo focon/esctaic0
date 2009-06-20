@@ -38,6 +38,18 @@ role :memcache, "ec2-79-125-40-58.eu-west-1.compute.amazonaws.com"
 # will run with RAILS_ENV set to this value.
 set :rails_env, "production"
 
+
+
+
+
+
+
+
+
+
+
+
+
 # EC2 on Rails config. 
 # NOTE: Some of these should be omitted if not needed.    
 set :ec2onrails_config, {
@@ -58,7 +70,7 @@ set :ec2onrails_config, {
   # connections on the public network interface (you should block the MySQL
   # port with the firewall anyway). 
   # If you don't care about setting the mysql root password then remove this.
-  :mysql_root_password => "kingrat",
+  :mysql_root_password => "",
   
   # Any extra Ubuntu packages to install if desired
   # If you don't want to install extra packages then remove this.
@@ -100,4 +112,29 @@ set :ec2onrails_config, {
   # /etc/ssl/certs/default.pem and the key file should be in
   # /etc/ssl/private/default.key (see :server_config_files_root).
  # :enable_ssl => true
+ 
+ # Paths to non versioned configuration files on deployment server
+ 
 }
+set :nonvc_configs, ['config/s3.yml']
+
+desc "Copies non versioned configuration files after setup"
+task :copy_nonvconfig, :roles => [:app] do
+  host = find_servers_for_task(current_task).first.host
+  privkey = ssh_options[:keys][0]
+  # ensure config folder is in shared_path
+  run "mkdir -p #{shared_path}/config"
+  nonvc_configs.each do |config|
+    run_local "scp -i 'id_dsa' #{config} app@
+#{host}:#{shared_path}/config"
+  end
+end
+
+desc "Moves over server config files after deploying the code"
+task :update_config, :roles => [:app] do
+  run "cp -Rf #{shared_path}/config/* #{current_path}/config"
+end
+
+after 'deploy:update_code', :copy_nonvconfig
+after 'deploy:symlink', :update_config 
+ 
