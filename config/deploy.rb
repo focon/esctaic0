@@ -55,14 +55,15 @@ set :rails_env, "production"
 set :ec2onrails_config, {
   # S3 bucket and "subdir" used by the ec2onrails:db:restore task
   :restore_from_bucket => "focon",
-  # :restore_from_bucket_subdir => "database",
-  
+  # :restore_from_bucket_subdir => "focon1",
+  # :restore_from_bucket_subdir
   # S3 bucket and "subdir" used by the ec2onrails:db:archive task
   # This does not affect the automatic backup of your MySQL db to S3, it's
   # just for manually archiving a db snapshot to a different bucket if 
   # desired.
-  :archive_to_bucket => "focon",
+  #:archive_to_bucket => "focon2",
   # :archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
+  #:archive_to_bucket_subdir => "db-archive/#{Time.new.strftime('%Y-%m-%d--%H-%M-%S')}",
   
   # Set a root password for MySQL. Run "cap ec2onrails:db:set_root_password"
   # to enable this. This is optional, and after doing this the
@@ -75,7 +76,7 @@ set :ec2onrails_config, {
   # Any extra Ubuntu packages to install if desired
   # If you don't want to install extra packages then remove this.
   #:packages => ["logwatch", "imagemagick"],
-  
+  :packages=>[ "mislav-will_paginate" ],
   # Any extra RubyGems to install if desired: can be "gemname" or if a 
   # particular version is desired "gemname -v 1.0.1"
   # If you don't want to install extra rubygems then remove this
