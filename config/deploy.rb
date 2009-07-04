@@ -37,19 +37,6 @@ role :memcache, "ec2-79-125-40-58.eu-west-1.compute.amazonaws.com"
 # on the server. Your app and your hourly/daily/weekly/monthly scripts
 # will run with RAILS_ENV set to this value.
 set :rails_env, "production"
-
-
-
-
-
-
-
-
-
-
-
-
-
 # EC2 on Rails config. 
 # NOTE: Some of these should be omitted if not needed.    
 set :ec2onrails_config, {
@@ -71,12 +58,12 @@ set :ec2onrails_config, {
   # connections on the public network interface (you should block the MySQL
   # port with the firewall anyway). 
   # If you don't care about setting the mysql root password then remove this.
-  :mysql_root_password => "",
+  :mysql_root_password => "kingrat",
   
   # Any extra Ubuntu packages to install if desired
   # If you don't want to install extra packages then remove this.
   #:packages => ["logwatch", "imagemagick"],
-  :packages=>[ "mislav-will_paginate" ],
+  #:packages=>[ "mislav-will_paginate" ],
   # Any extra RubyGems to install if desired: can be "gemname" or if a 
   # particular version is desired "gemname -v 1.0.1"
   # If you don't want to install extra rubygems then remove this
