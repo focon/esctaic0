@@ -1,14 +1,16 @@
 ActionController::Routing::Routes.draw do |map|
+  
+#  map.resources :publications
   map.resources :registrations
 
   map.resources :details
-
-
-
-map.namespace :admin do |admin|
-  map.root :controller=>'home'
-  admin.resources :publications, :member => { :confirm_destroy => :get }
  
+
+  
+map.namespace :admin  do |admin|
+  
+  admin.resources  :publications, :member => { :confirm_destroy => :get }
+         
  
 end
 map.resources :publications
