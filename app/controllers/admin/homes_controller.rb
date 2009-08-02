@@ -27,6 +27,7 @@ def index
                                 records added to data base"
    end
 end
+end
   def authenticate
     authenticate_or_request_with_http_basic do |user, pass|
       #User.authenticate(name, pass)
@@ -34,5 +35,5 @@ end
     end
   end
  end
-end
+
 
