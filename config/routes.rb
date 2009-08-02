@@ -9,8 +9,8 @@ ActionController::Routing::Routes.draw do |map|
   
 map.with_options(:namespace => "admin")  do |admin|
   
-  admin.resources :homes, :publications, :member => { :confirm_destroy => :get }
-  admin.resources     
+  admin.resources  :publications, :member => { :confirm_destroy => :get }
+  admin.resources   :homes  
  
 end
 map.resources :publications
