@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
 map.namespace :admin  do |admin|
   
   admin.resources  :publications, :member => { :confirm_destroy => :get }
-         
+  admin.resources :homes    
  
 end
 map.resources :publications
