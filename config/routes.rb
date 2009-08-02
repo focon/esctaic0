@@ -7,10 +7,10 @@ ActionController::Routing::Routes.draw do |map|
  
 
   
-map.namespace :admin  do |admin|
+map.with_options(:namespace => "admin")  do |admin|
   
-  admin.resources  :publications, :member => { :confirm_destroy => :get }
-  admin.resources :homes    
+  admin.resources :homes, :publications, :member => { :confirm_destroy => :get }
+  admin.resources     
  
 end
 map.resources :publications
