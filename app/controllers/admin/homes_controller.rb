@@ -3,7 +3,7 @@ class Admin::HomesController < ApplicationController
   layout 'publications'
 def index
 
-
+end
     require 'csv'
 
    def csv_import 
@@ -27,7 +27,7 @@ def index
                                 records added to data base"
    end
 end
-end
+
   def authenticate
     authenticate_or_request_with_http_basic do |user, pass|
       #User.authenticate(name, pass)
