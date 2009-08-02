@@ -3,7 +3,7 @@ class Admin::HomesController < ApplicationController
   layout 'publications'
 def index
 
-end
+
     require 'csv'
 
    def csv_import 
@@ -34,5 +34,5 @@ end
     end
   end
  end
-
+end
 
