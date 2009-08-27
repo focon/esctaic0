@@ -4,13 +4,19 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :registrations
 
   map.resources :details
+ map.connect '', :controller=> 'admin/homes', :action=> 'index'
+ map.resources :publications, :collection => { :destroy_all => :delete }
+  
+map.namespace :admin do |admin|
  
-
+  admin.resources :publications, :member => { :confirm_destroy => :get }
+         
+ 
+end
+map.namespace :admin do |admin|
   
-map.with_options(:namespace => "admin")  do |admin|
-  
-  admin.resources  :publications, :member => { :confirm_destroy => :get }
-  admin.resources   :homes  
+  admin.resources :homes
+         
  
 end
 map.resources :publications

@@ -2,7 +2,7 @@ class PublicationsController < ApplicationController
 
   # GET /publications
   # GET /public1ations.xml
-  
+
      def index
   @publications = Publication.paginate :per_page => 5, :page => params[:page],
                                        :order => 'title'

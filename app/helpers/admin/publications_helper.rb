@@ -1,2 +1,2 @@
 module Admin::PublicationsHelper
-end
+  end

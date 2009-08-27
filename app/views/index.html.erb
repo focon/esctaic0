@@ -5,8 +5,8 @@
 		<title>CVS upload</title>
 	</head>
 	<body>
-				<div id=main>
-	 <% form_for :dump, :url=>{:controller=>"admin/homes",
+		<div id=main>
+	 <% form_for :dump, :url=>{:controller=>"homes",
 
                     :action=>"csv_import"},
 
@@ -22,24 +22,15 @@
        <%= f.file_field :file -%>
      </td>
    </tr>
-
-	<tr>
+   <tr>
      <td colspan='2'>
        <%= submit_tag 'Submit' -%>
      </td>
    </tr>
-    <tr><br>
-     <td colspan='2'>
- <%= link_to "Go to Admin Publications", {:controller => "admin/publications", :action => "index"} %>
-</td>
-<tr><br>
-     <td colspan='2'>
- <%= link_to "Go to the public site", {:controller => "/publications", :action => "index"} %>
-</td>
-   </tr></table>
+ </table>
 <% end -%>
- 
-</div>
 
+</div>
 	</body>
 </html>
+<%= link_to 'Back', homes_path %>

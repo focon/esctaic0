@@ -26,6 +26,7 @@
 <br />
 <%= will_paginate @publications %>
 
+
 <%= link_to 'Add a new publication', new_admin_publication_path %>|
 <%= link_to 'Add list of publications through a cvs file', {:controller => "admin/homes", :action => "index"} %>|
 <%= link_to "Go to the public site", {:controller => "/publications", :action => "index"} %>

@@ -95,10 +95,12 @@ def confirm_destroy
   @publication = Publication.find(params[:id])
 end
 
+
   def authenticate
     authenticate_or_request_with_http_basic do |user, pass|
       #User.authenticate(name, pass)
       user == 'akita' && pass == 'akita'      
     end
   end
+
 end

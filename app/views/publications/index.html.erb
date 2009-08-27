@@ -5,12 +5,20 @@
     <th>Author</th>
     <th>Title</th>
     <th>Category</th>
+	<th>Year</th>
+	<th>Venue</th>
+	
+		
+	
+	
+	
+	
 	  </tr>
 
 <% for publication in @publications %>
   <tr><td><%=h publication.author %></td>
      <td><a href="http://<%=h publication.url %>"><%=h publication.title %></a></td>
-    <td><%=h publication.category %></td>
+    <td><%=h publication.category %></td><td><%=h publication.year %></td><td><%=h publication.venue %></td>
   </tr>
 <% end %>
 </table>
