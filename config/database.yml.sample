@@ -1,0 +1,20 @@
+development:
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: esctaic_development
+  pool: 5
+  username: root
+  password: 
+  socket: /var/run/mysqld/mysqld.sock
+
+production:
+  host: db_primary
+  adapter: mysql
+  encoding: utf8
+  reconnect: false
+  database: esctaic_production
+  pool: 5
+  username: root
+  password:
+  socket: /var/run/mysqld/mysqld.sock
