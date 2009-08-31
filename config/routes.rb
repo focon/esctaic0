@@ -1,10 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   
-#  map.resources :publications
-  map.resources :registrations
-
-  map.resources :details
- map.connect '', :controller=> 'admin/homes', :action=> 'index'
+#  map.resources :publications map.connect '', :controller=> 'admin/homes', :action=> 'index'
  map.resources :publications, :collection => { :destroy_all => :delete }
   
 map.namespace :admin do |admin|

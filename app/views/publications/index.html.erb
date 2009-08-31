@@ -5,13 +5,8 @@
     <th>Author</th>
     <th>Title</th>
     <th>Category</th>
-	<th>Year</th>
 	<th>Venue</th>
-	
-		
-	
-	
-	
+	<th>Year</th>
 	
 	  </tr>
 
@@ -20,11 +15,15 @@
      <td><a href="http://<%=h publication.url %>"><%=h publication.title %></a></td>
     <td><%=h publication.category %></td><td><%=h publication.year %></td><td><%=h publication.venue %></td>
   </tr>
+  
 <% end %>
 </table>
 
 <br />
-<%= will_paginate @publications %>
-<%= link_to 'Home', publications_path %>|
+<table>
+<tr><td><%= will_paginate @publications %></td><td></td><td></td><td></td><td></td><td><%= link_to'Home', publications_path %></td></tr>
+</table>
+
+
 
 
