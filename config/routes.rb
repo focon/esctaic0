@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  
+  map.connect '', :controller=> 'homes', :action=> 'index' 
 #  map.resources :publications map.connect '', :controller=> 'admin/homes', :action=> 'index'
  map.resources :publications, :collection => { :destroy_all => :delete }
   

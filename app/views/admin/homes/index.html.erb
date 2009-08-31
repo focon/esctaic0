@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-		<title>CVS upload</title>
+		<title>Admin area</title>
 	</head>
 	<body>
 				<div id=main>
@@ -11,11 +11,21 @@
                     :action=>"csv_import"},
 
                     :html => { :multipart => true } do |f| -%>
- <table">
+ <table>
+ 	<tr>
+     <td>
+      
+        <h1>Administration area :</h1>
+      
+     </td>
+     <td >
+      
+     </td>
+   </tr>
    <tr>
      <td>
       <label for="dump_file">
-        Select a CSV File :
+        Upload a CSV File :
       </label>
      </td>
      <td >
@@ -30,11 +40,19 @@
    </tr>
     <tr><br>
      <td colspan='2'>
- <%= link_to "Go to Admin Publications", {:controller => "admin/publications", :action => "index"} %>
-</td>
+ <%= link_to "Publications", {:controller => "admin/publications", :action => "index"} %>
+</td></tr>
+    <tr><br>
+     <td colspan='2'>
+ <%= link_to "Members", {:controller => "admin/publications", :action => "index"} %>
+</td></tr>
+    <tr><br>
+     <td colspan='2'>
+ <%= link_to "Photo's", {:controller => "admin/publications", :action => "index"} %>
+</td></tr>
 <tr><br>
      <td colspan='2'>
- <%= link_to "Go to the public site", {:controller => "/publications", :action => "index"} %>
+ <%= link_to "Return the public site", {:controller => "/homes", :action => "index"} %>
 </td>
    </tr></table>
 <% end -%>
