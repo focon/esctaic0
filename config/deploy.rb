@@ -4,7 +4,7 @@
 set :application, "esctaic"
 set :scm, :git 
 set :scm_passphrase, "" 
-set :deploy_via,  :copy
+set :deploy_via,  :remote_cache
  set :user, :root
 set :repository_cache, "git_cache"
 # set :scm_username, focon
@@ -17,7 +17,7 @@ set :git_shallow_clone, 1
 set :use_sudo, false
 # set :repository,"."
 # set :repository, "http://svn.foo.com/svn/#{application}/trunk"
- set :repository, "git@github.com:focon/esctaic.git"
+ set :repository, "ssh://git@github.com:focon/esctaic.git"
 #file:///focon/[path to project]/.git""
 # NOTE: for some reason Capistrano requires you to have both the public and
 # the private key in the same folder, the public key should have the 
