@@ -111,13 +111,14 @@ def csv_import
      if c.save
         n=n+1
         GC.start if n%50==0
-     end
-     flash.now[:message]="CSV Import Successful,  #{n} new
-
-                                records added to data base"
+     
+     
+ 
+     flash.now[:message]="CSV Import Successful,  #{n} new records added to data base #{@template.link_to('publication', @publications)}"
+                      
    end
 end
-
+end
 
   def authenticate
     authenticate_or_request_with_http_basic do |user, pass|

@@ -6,6 +6,7 @@
   <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
   <title>Publications: <%= controller.action_name %></title>
   <%= stylesheet_link_tag 'publications' %>
+  <%=auto_discovery_link_tag :atom, formatted_publications_path(:atom) %>
 </head>
 <body id="container">
 	<p style="color: green"><%= flash[:notice] %></p>

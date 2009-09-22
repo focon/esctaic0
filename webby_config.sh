@@ -1,7 +1,7 @@
 
 echo "gem: --no-ri --no-rdoc" >> ~/gem.rc
 
- 
+ # install required gems
 sudo gem install -v 1.9.0 liquid
 sudo gem install tzinfo test-unit
 sudo gem install mislav-will_paginate

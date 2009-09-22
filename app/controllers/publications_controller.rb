@@ -4,9 +4,19 @@ class PublicationsController < ApplicationController
   # GET /public1ations.xml
 
      def index
+       @publications = Publication.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @publications }
+      format.json  { render :json => @publications }
+      format.atom
+      
   @publications = Publication.paginate :per_page => 5, :page => params[:page],
                                        :order => 'title'
    end 
+ end
+ 
 
   # GET /publications
   # GET /publications.xml
