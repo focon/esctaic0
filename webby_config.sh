@@ -4,6 +4,8 @@ echo "gem: --no-ri --no-rdoc" >> ~/gem.rc
  # install required gems
 sudo gem install -v 1.9.0 liquid
 sudo gem install tzinfo test-unit
+sudo gem install authlogic
+sudo gem install lockdown
 sudo gem install mislav-will_paginate
  rake gems:install
 echo WC_DB_ENGINE=${WC_DB_ENGINE}
