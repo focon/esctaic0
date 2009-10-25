@@ -1,8 +1,15 @@
 ActionController::Routing::Routes.draw do |map|
-  map.connect '', :controller=> 'homes', :action=> 'index' 
+ 
+ map.login "login", :controller => "member_sessions", :action => "new"
+map.logout "logout", :controller => "member_sessions", :action => "destroy"
+ map.resources :member_sessions
+
+ map.resources :members
+
+#  map.connect '', :controller=> 'homes', :action=> 'index' 
 #  map.resources :publications map.connect '', :controller=> 'admin/homes', :action=> 'index'
  map.resources :publications, :collection => { :destroy_all => :delete }
-  
+   map.resources :members, :has_many=>:publications
 map.namespace :admin do |admin|
  
   admin.resources :publications, :member => { :confirm_destroy => :get }
@@ -12,11 +19,13 @@ end
 map.namespace :admin do |admin|
   
   admin.resources :homes
+ 
          
  
 end
 map.resources :publications
-
+map.resources :homes
+map.root :homes
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

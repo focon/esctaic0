@@ -1,6 +1,6 @@
 class HomesController < ApplicationController
  # before_filter :authenticate
-  layout 'publications'
+  layout 'application'
 def index
 
 end

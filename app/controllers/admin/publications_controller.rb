@@ -1,5 +1,5 @@
 class Admin::PublicationsController < ApplicationController
- before_filter :authenticate
+  before_filter :authenticate
   # GET /publications
   # GET /publications.xml
   
