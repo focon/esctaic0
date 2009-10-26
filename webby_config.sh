@@ -25,7 +25,7 @@ echo "
   <<: *login
   encoding: utf8
   " >> config/database.yml
-fi
+  fi
  
 
  
