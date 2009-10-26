@@ -26,9 +26,11 @@ encoding: utf8
 " >> config/database.yml
 fi
  
-
- 
+rake config/initializers/session_store.rb
 rake db:bootstrap RAILS_ENV=production
-chown www-data log'
 rake db:schema:load RAILS_ENV=production
 rake db:populate RAILS_ENV=production
+chown www-data log'
+chown www-data files
+chown www-data tmp
+chown www-data public/plugin_assets
