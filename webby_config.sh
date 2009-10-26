@@ -1,4 +1,3 @@
-
 echo "gem: --no-ri --no-rdoc" >> ~/gem.rc
 
  # install required gems
@@ -31,3 +30,5 @@ fi
  
 rake db:bootstrap RAILS_ENV=production
 chown www-data log'
+rake db:schema:load RAILS_ENV=production
+rake db:populate RAILS_ENV=production
