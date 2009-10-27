@@ -1,0 +1,52 @@
+<h1>Editing member</h1>
+
+<% form_for(@member) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :publications_id %><br />
+    <%= f.text_field :publications_id %>
+  </p>
+  <p>
+    <%= f.label :photo %><br />
+    <%= f.text_field :photo %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.label :forename %><br />
+    <%= f.text_field :forename %>
+  </p>
+  <p>
+    <%= f.label :surname %><br />
+    <%= f.text_field :surname %>
+  </p>
+  <p>
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+    <p>
+    <%= f.label :nationalrep %><br />
+    <%= f.check_box :nationalrep %>
+  </p>
+  <p>
+    <%= f.label :current %><br />
+    <%= f.check_box :current %>
+  </p>
+  <p>
+    <%= f.label :admin_id %><br />
+    <%= f.text_field :admin_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @member %> |
+<%= link_to 'Back', members_path %>

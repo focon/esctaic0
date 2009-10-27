@@ -1,0 +1,6 @@
+
+<% title ("New Member") %>
+<%= render @member %>
+
+
+<%= link_to 'Back', root_path %>

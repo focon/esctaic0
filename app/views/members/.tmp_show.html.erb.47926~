@@ -1,0 +1,44 @@
+
+
+<p>
+  <b>Photo:</b>
+  <%=h @member.photo %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @member.password %>
+</p>
+
+<p>
+  <b>Forename:</b>
+  <%=h @member.forename %>
+</p>
+
+<p>
+  <b>Surname:</b>
+  <%=h @member.surname %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @member.email %>
+</p>
+
+<p>
+  <b>Current:</b>
+  <%=h @member.current %>
+</p>
+<p>
+  <b>Publications:</b>
+  <%=h @member.publications_id %>
+</p>
+
+<p>
+  <b>Admin:</b>
+  <%=h @member.admin_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_member_path(@member) %> |
+<%= link_to 'Back', members_path %>

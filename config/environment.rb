@@ -23,7 +23,7 @@ Rails::Initializer.run do |config|
   config.gem 'mislav-will_paginate', :version => '~> 2.3.11', :lib => 'will_paginate', 
     :source => 'http://gems.github.com'
    config.gem "authlogic", :version => '~> 2.1.2',:source => 'http://gems.github.com'
-  config.gem 'lockdown', :lib => false, :version => '1.3.2'
+  config.gem 'lockdown', :lib => false, :version => '1.3.1',:source=>'http://gemcutter.org/gems/lockdown'
   # config.gem "nifty-generators"
 
   # Only load the plugins named here, in the order given (default is alphabetical).

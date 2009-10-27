@@ -1,0 +1,14 @@
+<% title "Login" %>
+
+<% form_for @member_session do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :surname %><br />
+    <%= f.text_field :surname %><br />
+    <br />
+    <%= f.label :password %><br />
+    <%= f.password_field :password %><br />
+	
+  <p><%= f.submit "Login" %></p>
+<% end %>
+
+
